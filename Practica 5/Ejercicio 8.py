@@ -1,11 +1,19 @@
 print 'Escribe un limite'
 a=input()
-li=[]
 print 'Escribe un valor que no supere' ,(a)
 b=input()
-while b<a: 
+while b>a:
+    print (b), 'es mayor a' ,(a), 'intentalo otra vez'
+    b=input()
+li=[b]
+a=a-b
+while a>0:
+    print 'Introduce un valor'
+    b=input()
+    while b>a:
+        print (b), 'es demasiado grande, intentalo otra vez'
+        b=input()
     li=li+[b]
-    print 'Escribe otro valor que no supere' ,(a)
-    c=input()
-    c+b=b
-print 'El limite a superar es' ,(a),'. La lista creada es',(li)    
+    a=a-b
+print (li)
+    
